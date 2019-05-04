@@ -200,7 +200,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 132093067}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -391,12 +391,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 586835791}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff83cea50d37a394d93e13b9640079b5, type: 3}
+  m_Script: {fileID: 11500000, guid: f1ec867bbe6e1aa4d88e309a1ff51571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.05
-  fullScript: 
+  delay: 0.1
+  fullScript: "Player: Hello ma\u2019am, could you please answer some questions regarding
+    the murder of the high priest?#F: Yes, sure."
   dialogueBoxCharLength: 280
+  choiceScript1: 'P1: What is your job, and where were you when the murder took place?#F1:
+    I am a farmer sir. I mainly grow wheat, barley and papyrus here on my farm. The
+    day of the murder, I was at my farm, harvesting what little crops have grown this
+    year. '
+  choiceScript2: "P2: I see that you have a lot of rare animals. Is it a hobby of
+    yours to collect them?#F2: Yes, it is indeed. I\u2019ve been very close to animals
+    since I was young and I love taking care of them. "
+  choiceScript3: 'P3: Did you have anything to do with the priest? For example, did
+    you talk recently or have any arguments?#F3: Yes, actually there was an incident
+    that happened before his death. He came by my farm on business, but accidentally
+    stepped in animal feces. He claimed it ruined his purity for the ceremony and
+    got so angry that he ordered me to put down all of my animals. We got into a little
+    argument because I could never imagine putting down my precious animals for something
+    so insignificant. '
+  choice1: {fileID: 673430392}
+  choice2: {fileID: 132093069}
+  choice3: {fileID: 608382629}
 --- !u!1 &608382627
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,7 +503,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 608382627}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -528,7 +546,7 @@ GameObject:
   - component: {fileID: 619780618}
   m_Layer: 5
   m_Name: ChoiceBox
-  m_TagString: Untagged
+  m_TagString: ChoiceBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -681,7 +699,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 673430390}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 

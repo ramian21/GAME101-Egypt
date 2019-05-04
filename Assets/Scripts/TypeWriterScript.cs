@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TypeWriterScript : MonoBehaviour
 {
     [SerializeField]
-    protected float delay = 0.1f;
+    protected float delay = 0.05f;
     [SerializeField]
     protected string fullScript;
 
@@ -32,15 +32,26 @@ public class TypeWriterScript : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    protected void Start()
     {
         // parse full script
-        lines = fullScript.Split('#');
-        lineChunks = new List<string>();
-        fullScriptInChunks = new List<string>();
 
         index = -1;
         currentlyDisplaying = false;
+        
+        
+        lineChunks = new List<string>();
+        fullScriptInChunks = new List<string>();
+
+        parseAndAdd(fullScript);
+
+        StartCoroutine("ShowText", fullScriptInChunks[++index]);
+    }
+
+    protected void parseAndAdd(string script) {
+
+        
+        lines = script.Split('#');
 
         string[] linesRef = lines;
         List<string> lineChunksRef = lineChunks;
@@ -69,7 +80,6 @@ public class TypeWriterScript : MonoBehaviour
                 fullScriptInChunks.Add(currentLineChunksRef[i]);
             }
         }
-        StartCoroutine("ShowText", fullScriptInChunks[++index]);
     }
 
     void Update()

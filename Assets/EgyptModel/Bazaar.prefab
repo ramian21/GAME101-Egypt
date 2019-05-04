@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3584825198707910182}
   - component: {fileID: 3584825198706943206}
   m_Layer: 0
-  m_Name: OpenBuilding
+  m_Name: Bazaar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
