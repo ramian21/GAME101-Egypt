@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -634,7 +634,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.05
-  fullScript: 
+  fullScript: "Player: Greetings, Sem Priest Harsiese! I am coming from the queen,
+    who has assigned me to the murder investigation of the High Priest Amenhotep.
+    I am seeking some information regarding his death, so that I can narrow down the
+    possible suspects. Can you please tell me how the    mummification process is
+    done?  \r\n\r\nHarsiese: Yes, I will tell you as much as I have found. First,
+    let me begin by telling you about how the mummification process is performed.
+    \r\n\r\nWhen the corpse is brought to us, we lay it on a work table and wash it
+    with a mixture of water and natron, then wax it to make it look as young as possible.
+    Then, the brain is partially extracted through the nostrils with an iron hook,
+    and the remains part of the brain is       dissolved by injecting fluids into
+    the body.  As for the organs, extract those by making an incision along the side
+    of the abdomen. After extraction, each organ is washed with scented oil and water,
+    wrung out, and then wrapped in cloths. Then, the lungs, liver, stomach, and      intestines
+    were placed in funerary urns, or canopic jars, filled with the remaining blood
+    and other bodily fluids of the deceased. \r\n\r\nAfter we remove the organs, we
+    begin the drying process for the corpse by placing linen pouched filled with myrrh
+    and natron inside the empty body. Then, we cover the body with a mound of dry
+    natron for 70 days. Afterwards, the body is washed, desalinated and softened by
+    \        massaging scented oils and fats into it. The mouth of the deceased with
+    hot wax, myrrh and terebinth, but we leave the eyes in place behind the eyelids
+    as the deceased will be opening his or her eyes in the afterlife. \r\n\r\nLastly,
+    we wrap the body in resin-coated linen strips, and place a mask of pure gold,
+    cedar, cartonnage over the face of the deceased. Now the body was ready to be
+    wrapped in resin-coated linen strips. \r\n\r\nPlayer: Thank you for that detailed
+    explanation of this entire process. At what stage is the mummification process
+    of the deceased High Priest? Have you found any indications of how he died ?\r\n\r\nHarsiese:
+    So far, I have removed the organs from the corpse, stored them in the canopic
+    jars. The body is getting ready for the drying process at the moment. When I examined
+    the corpse for the first time, I saw that the Priest was hit on the back of his
+    neck with a heavy metal   object. It must have caused internal hemorrhage, as
+    there was blood coming out of his nostrils when the body was found and brought
+    over. I also noticed a lot of blood pooling out of the body while the internal
+    organs were being removed. Based on the bruising on the body, I       suspect
+    the murder weapon was most likely his own ankh that was found near the body. \r\n\r\nPlayer:
+    I am grateful for the information you have provided, Sem Priest Harsiese. I will
+    head over to the lower priests that were assigned to the temple for further investigations.
+    I can start by talking to merchant Qenna since the bazaar is the closest from
+    here. \r\n"
   dialogueBoxCharLength: 280
 --- !u!114 &915466312
 MonoBehaviour:

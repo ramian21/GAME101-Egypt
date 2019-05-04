@@ -88,5 +88,6 @@ public class GameControllerScript : MonoBehaviour
     public static class StaticClass
     {
         public static Vector3 CrossSceneInformation { get; set; }
+        public static int phase = 0;
     }
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -163,32 +163,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.05
-  fullScript: "Queen: Step forward.#Player: My Queen. (kneels)#Queen: I have a task
-    of great importance for you.#Player: What is your bidding, my Queen?#Queen: A
-    great crime has been committed against the kingdom. There\u2019s been a murder;
-    it happened a month ago during the power struggle after my husband died.#Player:
-    Who has been killed my Queen?#Queen: The great High Priest Amenhotep who was the
-    forefront for our connection to the gods, his power was almost as great as my
-    own. His main duties, kept up year round, included: running and maintaining the
-    great temple, performing the three great rituals of the day, the awakening ceremony
-    performed at dawn, the midday ceremony performed at noon, and then the night ceremony
-    performed at sunset. The High Priest would break the royal clay seal on the doors
-    to the sanctuary and would clean the statue in the shrine. Finally, he would exit
-    the sanctuary walking    backwards, careful not to turn his back to the Gods,
-    and swept the floor in front of him as he left--this symbolized doing away with
-    dirt left by him. It was at the point of sweeping the floor that the High Priest
-    was murdered.#Queen: The High Priest has the assistance of three lower priests
-    who are cycled in rotation every three months when they are not performing their
-    duties, as they also have normal everyday jobs. The lower priests who were in
-    cycle at the time have now returned to their jobs. #Queen: As my latest addition
-    to the Medjay I am tasking you with this investigation. Prove yourself to me and
-    find justice for your kingdom\u2019s High Priest. You can start by interrogating
-    the Blind Witness who found the body and alerted the guards.#Queen: Recognizing
-    your commitment to justice and will to investigate, the gods have given us this
-    stone tablet which may prove to be extremely useful. If you ask the correct questions
-    and remain on the path of truth, you will be given words that solve the mystery
-    of this tablet.    Once solved, it will confirm your doubts about the true killer.
-    #Player: I am grateful for this opportunity my queen, I will not fail you."
+  fullScript: "Queen: Step forward.\r\nPlayer: My Queen. (kneels)\r\nQueen: I have
+    a task of great importance for you.\r\nPlayer: What is your bidding, my Queen?\r\nQueen:
+    A great crime has been committed against the kingdom. There\u2019s been a murder;
+    it happened a month ago during the power struggle after my husband died.\r\nPlayer:
+    Who has been killed my Queen?\r\nQueen: The great High Priest Amenhotep who was
+    the forefront for our connection to the gods, his power was almost as great as
+    my own. His main duties, kept up year round, included: running and maintaining
+    the great temple, performing the three great rituals of the day, the awakening
+    ceremony performed at dawn, the midday ceremony performed at noon, and then the
+    night ceremony performed at sunset. The High Priest would break the royal clay
+    seal on the doors to the sanctuary and would clean the statue in the shrine. Finally,
+    he would exit the sanctuary walking    backwards, careful not to turn his back
+    to the Gods, and swept the floor in front of him as he left--this symbolized doing
+    away with dirt left by him. It was at the point of sweeping the floor that the
+    High Priest was murdered.\r\nQueen: The High Priest has the assistance of three
+    lower priests who are cycled in rotation every three months when they are not
+    performing their duties, as they also have normal everyday jobs. The lower priests
+    who were in cycle at the time have now returned to their jobs. \r\nQueen: As my
+    latest addition to the Medjay I am tasking you with this investigation. Prove
+    yourself to me and find justice for your kingdom\u2019s High Priest. You can start
+    by interrogating the Blind Witness who found the body and alerted the guards.\r\nQueen:
+    Recognizing your commitment to justice and will to investigate, the gods have
+    given us this stone tablet which may prove to be extremely useful. If you ask
+    the correct questions and remain on the path of truth, you will be given words
+    that solve the mystery of this tablet.    Once solved, it will confirm your doubts
+    about the true killer. \r\nPlayer: I am grateful for this opportunity my queen,
+    I will not fail you.\r\nPlayer: So tell me, why you were at the temple that morning?\r\nKhufu:
+    Sir, I was taking part in my morning prayer to the Gods.\r\nPlayer: Why are you
+    permitted to enter the temple?\r\nKhufu: Sir, I have lost the use of my eyes,
+    and those of us that have no sight are permitted to enter the temple for we can
+    not gaze upon the glory of the Gods.\r\nPlayer: Can you tell me what happened
+    that morning?\r\nKhufu: I may not have my sight, but my sense of hearing and smell
+    make up for my lack of sight. \r\nPlayer: Did you hear the high priest call for
+    help or the murderer approach the high priest? \r\nKhufu: I first heard the High
+    Priest finishing up his morning ritual, he was sweeping the floors of any dirt
+    and impurities and then I heard a loud whack and a crash, after which I heard
+    running in the direction out of the temple. I alerted the Guards that something
+    was wrong and they told me the High Priest is dead.\r\nPlayer: Are there any distinct
+    smells that you recall from that morning?\r\nKhufu: Now that you mention it, I
+    did smell something out of place because I usually smell the incense that the
+    high priests use because they are the only ones in the temple at dawn, but that
+    day I remember smelling an incense that only low priests use. I assume one of
+    the low priests was probably there attending the prayer.\r\nPlayer: Thank you
+    for your time. \r\nPlayer: (Hmm, that narrows down my suspects to being the lower
+    priests assigned to the temple.)\r\nQueen: The lower priests assigned to that
+    temple are Quenna, Meresamun, and Henut Taui. You may interview them to further
+    your investigation. Qenna is a merchant and can be found in the bazaar, Meresamun
+    is a farmer and you will find her farm near the Nile, and Henut Taui, who is an
+    entertainer can be found at the villa.  \r\n"
   dialogueBoxCharLength: 284
 --- !u!114 &81633736
 MonoBehaviour:

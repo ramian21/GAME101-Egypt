@@ -7,8 +7,15 @@ public class TypeWriterScript : MonoBehaviour
 {
     [SerializeField]
     protected float delay = 0.05f;
+
+
     [SerializeField]
+    [TextArea(3, 10)]
     protected string fullScript;
+
+    [SerializeField]
+    [TextArea(3, 10)]
+    protected string fullScriptPart2;
 
     protected string currentText = "";
 
@@ -38,20 +45,28 @@ public class TypeWriterScript : MonoBehaviour
 
         index = -1;
         currentlyDisplaying = false;
-        
-        
+
+
         lineChunks = new List<string>();
         fullScriptInChunks = new List<string>();
 
-        parseAndAdd(fullScript);
+        if (GameControllerScript.StaticClass.phase == 0)
+        {
+            parseAndAdd(fullScript);
+        }
+        else if (GameControllerScript.StaticClass.phase == 1)
+        {
+            parseAndAdd(fullScriptPart2);
+        }
 
         StartCoroutine("ShowText", fullScriptInChunks[++index]);
     }
 
-    protected void parseAndAdd(string script) {
+    protected void parseAndAdd(string script)
+    {
 
-        
-        lines = script.Split('#');
+
+        lines = script.Split(new char[] { '\r', '\n' }, System.StringSplitOptions.RemoveEmptyEntries);
 
         string[] linesRef = lines;
         List<string> lineChunksRef = lineChunks;

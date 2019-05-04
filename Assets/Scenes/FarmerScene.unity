@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -396,25 +396,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.1
   fullScript: "Player: Hello ma\u2019am, could you please answer some questions regarding
-    the murder of the high priest?#F: Yes, sure."
+    the murder of the high priest?\r\nMeresamun: Yes, sure."
+  fullScriptPart2: "Player: Hello ma\u2019am. I\u2019m afraid I will have to ask you
+    a few more questions regarding the investigation. \r\nMeresamun: Yes, of course.
+    I am here help in whatever way I can. "
   dialogueBoxCharLength: 280
-  choiceScript1: 'P1: What is your job, and where were you when the murder took place?#F1:
-    I am a farmer sir. I mainly grow wheat, barley and papyrus here on my farm. The
-    day of the murder, I was at my farm, harvesting what little crops have grown this
-    year. '
-  choiceScript2: "P2: I see that you have a lot of rare animals. Is it a hobby of
-    yours to collect them?#F2: Yes, it is indeed. I\u2019ve been very close to animals
-    since I was young and I love taking care of them. "
-  choiceScript3: 'P3: Did you have anything to do with the priest? For example, did
-    you talk recently or have any arguments?#F3: Yes, actually there was an incident
-    that happened before his death. He came by my farm on business, but accidentally
-    stepped in animal feces. He claimed it ruined his purity for the ceremony and
-    got so angry that he ordered me to put down all of my animals. We got into a little
-    argument because I could never imagine putting down my precious animals for something
-    so insignificant. '
+  choiceScript1: "Player: What is your job, and where were you when the murder took
+    place?\r\nMeresamun: I am a farmer sir. I mainly grow wheat, barley and papyrus
+    here on my farm. The day of the murder, I was at my farm, harvesting what little
+    crops have grown this year. "
+  choiceScript2: "Player: I see that you have a lot of rare animals. Is it a hobby
+    of yours to collect them?\r\nMeresamun: Yes, it is indeed. I\u2019ve been very
+    close to animals since I was young and I love taking care of them. "
+  choiceScript3: "Player: Did you have anything to do with the priest? For example,
+    did you talk recently or have any arguments?\r\nMeresamun: Yes, actually there
+    was an incident that happened before his death. He came by my farm on business,
+    but accidentally stepped in animal feces. He claimed it ruined his purity for
+    the ceremony and got so angry that he ordered me to put down all of my animals.
+    We got into a little argument because I could never imagine putting down my precious
+    animals for something so insignificant. "
+  choiceScript1Part2: "Player: Why did you pick this particular location for your
+    farm? \r\nMeresamun: It is close to the Nile, and as the Nile flows upwards instead
+    of downwards, it is quite helpful for irrigation. "
+  choiceScript2Part2: "P2: I see the Nile flows by your farm, but you do not seem
+    to have a very successful harvest this year. Is your business suffering? \r\nMeresamun:
+    Yes sir, I am having a difficult time this year. Everything was going fine until
+    this year, but a few months ago, the Nile seems to have dried up around my farm.
+    It seems to be fine in other areas close by, so someone must have obstructed the
+    path of the stream that flows in the direction of my farm. I suspect the high
+    priest may have done this out of spite for I did not put down my animals as he
+    ordered."
+  choiceScript3Part2: "P3: I see that the area around here is quite fertile and apt
+    for agriculture. Can you tell me how farming in the desert of Egypt works?\r\nMeresamun:
+    \ Deserts have these patches of small fertile lands that make it possible for
+    us to plant some crops."
   choice1: {fileID: 673430392}
   choice2: {fileID: 132093069}
   choice3: {fileID: 608382629}
+  closingText: 'Player: Thank you for your honest answers Meresamun. I will head over
+    to the last priest, Henut Taui for questioning. Her villa is North of the Palace. '
+  closingTextPart2: "Player: I am extremely grateful for your cooperation during this
+    investigation priestess Meresamun. I think I have some more questions for entertainer
+    Henut Taui, so I\u2019ll head over to the Villa in the North. "
 --- !u!1 &608382627
 GameObject:
   m_ObjectHideFlags: 0
@@ -1138,14 +1161,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1466832374}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff83cea50d37a394d93e13b9640079b5, type: 3}
+  m_Script: {fileID: 11500000, guid: f8ba7dc6fb743df4ba228e96eb34154b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.05
-  fullScript: 
-  dialogueBoxCharLength: 280
 --- !u!114 &1466832377
 MonoBehaviour:
   m_ObjectHideFlags: 0
