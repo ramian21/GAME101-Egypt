@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TypeWriterScript : MonoBehaviour
 {
-    [SerializeField]
-    protected float delay = 0.05f;
+    protected float delay = 0.03f;
 
 
     [SerializeField]
@@ -112,6 +112,10 @@ public class TypeWriterScript : MonoBehaviour
             {
                 StartCoroutine("ShowText", fullScriptInChunks[++index]);
             }
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && index >= fullScriptInChunks.Count -1)
+        {
+            SceneManager.LoadScene("OverworldScene");
         }
     }
 

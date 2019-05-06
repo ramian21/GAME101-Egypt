@@ -32,7 +32,11 @@ public class GameControllerScript : MonoBehaviour
         }
 
         contButton.onClick.AddListener(unPause);
+
+        player.transform.position = StaticClass.playerPosition;
+
         Time.timeScale = 1;
+ 
         pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
         unPause();
     }
@@ -57,7 +61,9 @@ public class GameControllerScript : MonoBehaviour
             print("enter hit");
             foreach (Trigger t in triggers)
             {
-                if(t.within()) {
+                if (t.within())
+                {
+                    StaticClass.playerPosition = player.transform.position;
                     t.moveToScene();
                 }
             }
@@ -87,7 +93,7 @@ public class GameControllerScript : MonoBehaviour
 
     public static class StaticClass
     {
-        public static Vector3 CrossSceneInformation { get; set; }
+        public static Vector3 playerPosition = new Vector3(11.3f, 2f, 31.6f);
         public static int phase = 0;
     }
 }

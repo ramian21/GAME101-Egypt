@@ -100,6 +100,10 @@ public class DialogueChoicesScript : TypeWriterScript
                 if (!showingChoices) { showChoiceBox(); }
             }
         }
+        else if (Input.GetKeyDown(KeyCode.Escape) && index >= fullScriptInChunks.Count - 1)
+        {
+            SceneManager.LoadScene("OverworldScene");
+        }
     }
 
     protected void parseAndAdd(string script)

@@ -21,11 +21,26 @@ public class MenuController : MonoBehaviour
 
     private Button quitButton;
 
+    [SerializeField]
+    private Button infoButton;
+
+    private GameObject[] infoObjects;
+
+    private bool infoShowing;
+
     void Start()
     {
         //Calls the TaskOnClick/TaskWithParameters/ButtonClicked method when you click the Button
         playButton.onClick.AddListener(Play);
         quitButton.onClick.AddListener(Quit);
+        infoButton.onClick.AddListener(Info);
+
+        infoObjects = GameObject.FindGameObjectsWithTag("Info");
+        infoShowing = false;
+        foreach (GameObject g in infoObjects)
+        {
+            g.SetActive(false);
+        }
     }
 
     void TaskOnClick()
@@ -41,9 +56,18 @@ public class MenuController : MonoBehaviour
 
     void Quit()
     {
-        Debug.Log("Before Quit");
         Application.Quit();
-        Debug.Log("After Quit");
+    }
+
+    void Info()
+    {
+
+        infoShowing = !infoShowing;
+        foreach (GameObject g in infoObjects)
+        {
+            g.SetActive(!infoShowing);
+        }
+
     }
 
     void TaskWithParameters(string message)

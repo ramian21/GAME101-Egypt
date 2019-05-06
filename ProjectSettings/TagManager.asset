@@ -8,6 +8,7 @@ TagManager:
   - ShowOnPause
   - Trigger
   - ChoiceBox
+  - Info
   layers:
   - Default
   - TransparentFX
