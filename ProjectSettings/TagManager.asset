@@ -11,6 +11,7 @@ TagManager:
   - Info
   - Phase2
   - Phase1
+  - EscapeText
   layers:
   - Default
   - TransparentFX

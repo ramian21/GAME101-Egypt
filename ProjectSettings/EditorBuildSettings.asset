@@ -26,7 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MerchantScene.unity
     guid: 43a75a3770e0bcb48bb47d349b6b42a3
+  - enabled: 0
+    path: Assets/Scenes/QueenSceneOld.unity
+    guid: 1d72aa9c763da6449b79dd525f681fe6
   - enabled: 1
     path: Assets/Scenes/QueenScene.unity
-    guid: 1d72aa9c763da6449b79dd525f681fe6
+    guid: a9c9160cc67111b49b06b9557738e8ee
   m_configObjects: {}

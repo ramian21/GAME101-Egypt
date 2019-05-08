@@ -54,6 +54,7 @@ public class DialogueChoicesScript : TypeWriterScript
     private GameObject[] phase1Objects;
 
     private GameObject[] phase2Objects;
+    private GameObject escapeText;
 
     // Start is called before the first frame update
     void Start()
@@ -72,7 +73,7 @@ public class DialogueChoicesScript : TypeWriterScript
         phase1Objects = GameObject.FindGameObjectsWithTag("Phase1");
         phase2Objects = GameObject.FindGameObjectsWithTag("Phase2");
 
-        if (GameControllerScript.StaticClass.phase < 4)
+        if (GameManagerScript.phase < 4)
         {
             choice1.onClick.AddListener(delegate { addWithClosingText(choiceScript1); });
             choice2.onClick.AddListener(delegate { addWithClosingText(choiceScript2); });
@@ -86,7 +87,7 @@ public class DialogueChoicesScript : TypeWriterScript
                 g.SetActive(false);
             }
         }
-        else if (GameControllerScript.StaticClass.phase >= 4)
+        else if (GameManagerScript.phase >= 4)
         {
             choice1.onClick.AddListener(delegate { addWithClosingText(choiceScript1Part2); });
             choice2.onClick.AddListener(delegate { addWithClosingText(choiceScript2Part2); });
@@ -100,6 +101,9 @@ public class DialogueChoicesScript : TypeWriterScript
                 g.SetActive(true);
             }
         }
+        choiceBox = GameObject.FindGameObjectsWithTag("ChoiceBox");
+        escapeText = GameObject.FindGameObjectWithTag("EscapeText");
+        escapeText.SetActive(false);
         hideChoiceBox();
     }
 
@@ -121,12 +125,23 @@ public class DialogueChoicesScript : TypeWriterScript
             }
             else if (index == fullScriptInChunks.Count - 1 && !choiceSelected)
             {
-                if (!showingChoices) { showChoiceBox(); }
+                if (!showingChoices)
+                {
+                    showChoiceBox();
+                }
+                else
+                {
+                    escapeText.SetActive(true);
+                }
+            }
+            else
+            {
+                escapeText.SetActive(true);
             }
         }
         else if (Input.GetKeyDown(KeyCode.Escape) && index >= fullScriptInChunks.Count - 1)
         {
-            GameControllerScript.StaticClass.phase++;
+            GameManagerScript.phase++;
             SceneManager.LoadScene("OverworldScene");
         }
     }
@@ -161,11 +176,11 @@ public class DialogueChoicesScript : TypeWriterScript
     {
         parseAndAdd(script);
         index--;
-        if (GameControllerScript.StaticClass.phase == 0)
+        if (GameManagerScript.phase == 0)
         {
             parseAndAdd(closingText);
         }
-        else if (GameControllerScript.StaticClass.phase == 1)
+        else if (GameManagerScript.phase == 1)
         {
             parseAndAdd(closingTextPart2);
         }

@@ -33,7 +33,7 @@ public class GameControllerScript : MonoBehaviour
 
         contButton.onClick.AddListener(unPause);
 
-        player.transform.position = StaticClass.playerPosition;
+        player.transform.position = GameManagerScript.playerPosition;
 
         Time.timeScale = 1;
  
@@ -63,7 +63,7 @@ public class GameControllerScript : MonoBehaviour
             {
                 if (t.within())
                 {
-                    StaticClass.playerPosition = player.transform.position;
+                    GameManagerScript.playerPosition = player.transform.position;
                     t.moveToScene();
                 }
             }
@@ -90,10 +90,4 @@ public class GameControllerScript : MonoBehaviour
         }
     }
 
-
-    public static class StaticClass
-    {
-        public static Vector3 playerPosition = new Vector3(11.3f, 2f, 31.6f);
-        public static int phase = 4;
-    }
 }

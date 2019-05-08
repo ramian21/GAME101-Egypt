@@ -51,12 +51,12 @@ public class TypeWriterScript : MonoBehaviour
         lineChunks = new List<string>();
         fullScriptInChunks = new List<string>();
 
-        if (GameControllerScript.StaticClass.phase < 4)
+        if (GameManagerScript.phase < 4)
         {
             parseAndAdd(fullScript);
             display = fullScript;
         }
-        else if (GameControllerScript.StaticClass.phase >= 4)
+        else if (GameManagerScript.phase >= 4)
         {
             parseAndAdd(fullScriptPart2);
             display = fullScriptPart2;
