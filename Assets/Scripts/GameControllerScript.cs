@@ -94,6 +94,6 @@ public class GameControllerScript : MonoBehaviour
     public static class StaticClass
     {
         public static Vector3 playerPosition = new Vector3(11.3f, 2f, 31.6f);
-        public static int phase = 0;
+        public static int phase = 4;
     }
 }

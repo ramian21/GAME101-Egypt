@@ -51,6 +51,10 @@ public class DialogueChoicesScript : TypeWriterScript
 
     private bool choiceSelected;
 
+    private GameObject[] phase1Objects;
+
+    private GameObject[] phase2Objects;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -63,19 +67,39 @@ public class DialogueChoicesScript : TypeWriterScript
 
         showingChoices = false;
         choiceSelected = false;
-        if (GameControllerScript.StaticClass.phase == 0)
+
+        choiceBox = GameObject.FindGameObjectsWithTag("ChoiceBox");
+        phase1Objects = GameObject.FindGameObjectsWithTag("Phase1");
+        phase2Objects = GameObject.FindGameObjectsWithTag("Phase2");
+
+        if (GameControllerScript.StaticClass.phase < 4)
         {
             choice1.onClick.AddListener(delegate { addWithClosingText(choiceScript1); });
             choice2.onClick.AddListener(delegate { addWithClosingText(choiceScript2); });
             choice3.onClick.AddListener(delegate { addWithClosingText(choiceScript3); });
+            foreach (GameObject g in phase1Objects)
+            {
+                g.SetActive(true);
+            }
+            foreach (GameObject g in phase2Objects)
+            {
+                g.SetActive(false);
+            }
         }
-        else if (GameControllerScript.StaticClass.phase == 1)
+        else if (GameControllerScript.StaticClass.phase >= 4)
         {
             choice1.onClick.AddListener(delegate { addWithClosingText(choiceScript1Part2); });
             choice2.onClick.AddListener(delegate { addWithClosingText(choiceScript2Part2); });
             choice3.onClick.AddListener(delegate { addWithClosingText(choiceScript3Part2); });
+            foreach (GameObject g in phase1Objects)
+            {
+                g.SetActive(false);
+            }
+            foreach (GameObject g in phase2Objects)
+            {
+                g.SetActive(true);
+            }
         }
-        choiceBox = GameObject.FindGameObjectsWithTag("ChoiceBox");
         hideChoiceBox();
     }
 
@@ -102,6 +126,7 @@ public class DialogueChoicesScript : TypeWriterScript
         }
         else if (Input.GetKeyDown(KeyCode.Escape) && index >= fullScriptInChunks.Count - 1)
         {
+            GameControllerScript.StaticClass.phase++;
             SceneManager.LoadScene("OverworldScene");
         }
     }

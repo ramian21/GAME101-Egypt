@@ -9,6 +9,8 @@ TagManager:
   - Trigger
   - ChoiceBox
   - Info
+  - Phase2
+  - Phase1
   layers:
   - Default
   - TransparentFX

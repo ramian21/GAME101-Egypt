@@ -45,18 +45,21 @@ public class TypeWriterScript : MonoBehaviour
 
         index = -1;
         currentlyDisplaying = false;
+        string display;
 
 
         lineChunks = new List<string>();
         fullScriptInChunks = new List<string>();
 
-        if (GameControllerScript.StaticClass.phase == 0)
+        if (GameControllerScript.StaticClass.phase < 4)
         {
             parseAndAdd(fullScript);
+            display = fullScript;
         }
-        else if (GameControllerScript.StaticClass.phase == 1)
+        else if (GameControllerScript.StaticClass.phase >= 4)
         {
             parseAndAdd(fullScriptPart2);
+            display = fullScriptPart2;
         }
 
         StartCoroutine("ShowText", fullScriptInChunks[++index]);
@@ -113,7 +116,7 @@ public class TypeWriterScript : MonoBehaviour
                 StartCoroutine("ShowText", fullScriptInChunks[++index]);
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Escape) && index >= fullScriptInChunks.Count -1)
+        else if (Input.GetKeyDown(KeyCode.Escape) && index >= fullScriptInChunks.Count - 1)
         {
             SceneManager.LoadScene("OverworldScene");
         }
